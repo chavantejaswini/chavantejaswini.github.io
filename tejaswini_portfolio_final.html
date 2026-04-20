@@ -64,8 +64,17 @@ h2 em{font-style:normal;color:var(--v);}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;}
 .tag{background:rgba(124,58,237,.1);border:1px solid rgba(124,58,237,.22);color:var(--vl);font-size:.76rem;padding:4px 10px;border-radius:100px;font-family:'JetBrains Mono',monospace;}
 .tag.c{background:rgba(6,182,212,.08);border-color:rgba(6,182,212,.2);color:var(--c);}
-.sg{display:grid;grid-template-columns:1fr 1fr;gap:11px;}
-.sc{background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:15px;transition:border-color .2s;}.sc:hover{border-color:var(--v);}
+.sg{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.sc{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:22px;transition:border-color .25s,transform .2s;position:relative;overflow:hidden;}
+.sc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--sc-accent,linear-gradient(90deg,var(--v),var(--vl)));border-radius:16px 16px 0 0;}
+.sc:hover{border-color:rgba(124,58,237,.5);}
+.sc-icons{display:flex;gap:10px;align-items:center;margin-bottom:14px;}
+.sc-icons img{width:36px;height:36px;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4));}
+.sc-cat{font-family:'Plus Jakarta Sans',sans-serif;font-size:1rem;font-weight:800;color:var(--t);margin-bottom:13px;letter-spacing:-.01em;}
+.sc-pills{display:flex;flex-wrap:wrap;gap:6px;}
+.sc-pill{display:inline-flex;align-items:center;gap:5px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:100px;padding:4px 10px;font-size:.7rem;color:var(--tm);font-family:'JetBrains Mono',monospace;transition:border-color .2s,color .2s,background .2s;white-space:nowrap;}
+.sc-pill:hover{border-color:var(--v);color:var(--vl);background:rgba(124,58,237,.08);}
+.sc-pill img{width:13px;height:13px;object-fit:contain;}
 .si2{font-size:1.2rem;margin-bottom:7px;}.sn2{font-family:'Plus Jakarta Sans',sans-serif;font-size:.82rem;font-weight:700;margin-bottom:4px;}
 .si3{font-size:clamp(.74rem,1.1vw,.9rem);color:var(--tm);line-height:1.7;font-family:'JetBrains Mono',monospace;}
 #skills{background:var(--bg);}
@@ -348,11 +357,96 @@ footer span{color:var(--v);}
       <div class="tags"><span class="tag">Multi-Agent Systems</span><span class="tag">RAG</span><span class="tag c">OpenAI API</span><span class="tag c">Vector DBs</span><span class="tag">AWS · Terraform</span><span class="tag">FastAPI</span><span class="tag c">spaCy · BERT</span><span class="tag">Salesforce LWC</span><span class="tag">Apex</span><span class="tag">Supabase</span></div>
     </div>
     <div class="sg rv rv2" style="grid-template-columns:1fr 1fr;">
-      <div class="sc"><div class="si2"><div style="display:flex;gap:7px;align-items:center;margin-bottom:6px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" width="26" height="26"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" width="26" height="26"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" width="26" height="26"></div></div><div class="sn2">AI / ML</div><div class="si3">OpenAI · LangChain<br/>RAG · pgvector<br/>spaCy · BERT · GPT-4o</div></div>
-      <div class="sc"><div class="si2"><div style="display:flex;gap:7px;align-items:center;margin-bottom:6px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="26" height="26"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" width="26" height="26"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" width="26" height="26"></div></div><div class="sn2">Backend</div><div class="si3">Python · FastAPI<br/>Java · Spring Boot<br/>Node.js · Express</div></div>
-      <div class="sc"><div class="si2"><div style="display:flex;gap:7px;align-items:center;margin-bottom:6px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" width="26" height="26"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" width="26" height="26"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" width="26" height="26"></div></div><div class="sn2">Cloud</div><div class="si3">AWS · Terraform<br/>App Runner · Lambda<br/>RDS · S3 · CloudFront</div></div>
-      <div class="sc"><div class="si2"><div style="display:flex;gap:7px;align-items:center;margin-bottom:6px;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" width="26" height="26"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" width="26" height="26"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" width="26" height="26"></div></div><div class="sn2">Data</div><div class="si3">Supabase · PostgreSQL<br/>MongoDB · Redis<br/>Pinecone · Firebase</div></div>
-      <div class="sc" style="grid-column:1/-1;background:rgba(124,58,237,.05);border-color:rgba(124,58,237,.25);"><div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;"><div style="display:flex;gap:7px;align-items:center;"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/salesforce/salesforce-plain.svg" width="26" height="26"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="26" height="26"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" width="26" height="26"></div><div class="sn2" style="margin:0;">Salesforce Ecosystem</div></div><div class="si3">LWC · Apex · Visualforce · SOQL · SOSL<br/>Salesforce DX · REST APIs · Custom Objects<br/>AI Specialist Certified · Platform Developer</div></div>
+      <div class="sc" style="--sc-accent:linear-gradient(90deg,#7c3aed,#a855f7);">
+        <div class="sc-icons">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg">
+        </div>
+        <div class="sc-cat">AI / ML</div>
+        <div class="sc-pills">
+          <span class="sc-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg">PyTorch</span>
+          <span class="sc-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg">TensorFlow</span>
+          <span class="sc-pill">OpenAI API</span>
+          <span class="sc-pill">LangChain</span>
+          <span class="sc-pill">RAG</span>
+          <span class="sc-pill">pgvector</span>
+          <span class="sc-pill">spaCy</span>
+          <span class="sc-pill">BERT</span>
+          <span class="sc-pill">GPT-4o</span>
+        </div>
+      </div>
+      <div class="sc" style="--sc-accent:linear-gradient(90deg,#06b6d4,#3b82f6);">
+        <div class="sc-icons">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg">
+        </div>
+        <div class="sc-cat">Backend</div>
+        <div class="sc-pills">
+          <span class="sc-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg">Python</span>
+          <span class="sc-pill">FastAPI</span>
+          <span class="sc-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg">Java</span>
+          <span class="sc-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg">Spring Boot</span>
+          <span class="sc-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg">Node.js</span>
+          <span class="sc-pill">Express</span>
+          <span class="sc-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg">TypeScript</span>
+        </div>
+      </div>
+      <div class="sc" style="--sc-accent:linear-gradient(90deg,#f97316,#eab308);">
+        <div class="sc-icons">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg">
+        </div>
+        <div class="sc-cat">Cloud &amp; DevOps</div>
+        <div class="sc-pills">
+          <span class="sc-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg">AWS</span>
+          <span class="sc-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg">Terraform</span>
+          <span class="sc-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg">Docker</span>
+          <span class="sc-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-plain.svg">Kubernetes</span>
+          <span class="sc-pill">App Runner</span>
+          <span class="sc-pill">Lambda</span>
+          <span class="sc-pill">CloudFront</span>
+        </div>
+      </div>
+      <div class="sc" style="--sc-accent:linear-gradient(90deg,#10b981,#06b6d4);">
+        <div class="sc-icons">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg">
+        </div>
+        <div class="sc-cat">Data &amp; Storage</div>
+        <div class="sc-pills">
+          <span class="sc-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg">PostgreSQL</span>
+          <span class="sc-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg">MongoDB</span>
+          <span class="sc-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg">Redis</span>
+          <span class="sc-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg">Firebase</span>
+          <span class="sc-pill">Supabase</span>
+          <span class="sc-pill">Pinecone</span>
+        </div>
+      </div>
+      <div class="sc" style="grid-column:1/-1;--sc-accent:linear-gradient(90deg,#00A1E0,#7c3aed);">
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:13px;flex-wrap:wrap;">
+          <div class="sc-icons" style="margin:0;">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/salesforce/salesforce-plain.svg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg">
+          </div>
+          <div class="sc-cat" style="margin:0;">Salesforce Ecosystem</div>
+        </div>
+        <div class="sc-pills">
+          <span class="sc-pill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/salesforce/salesforce-plain.svg">Salesforce DX</span>
+          <span class="sc-pill">LWC</span>
+          <span class="sc-pill">Apex</span>
+          <span class="sc-pill">Visualforce</span>
+          <span class="sc-pill">SOQL · SOSL</span>
+          <span class="sc-pill">REST APIs</span>
+          <span class="sc-pill">Custom Objects</span>
+          <span class="sc-pill">AI Specialist Certified</span>
+          <span class="sc-pill">Platform Developer</span>
+        </div>
+      </div>
     </div>
   </div>
 </div></section>
